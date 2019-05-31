@@ -1,0 +1,44 @@
+{
+  "name": "vscode-lwc-snippets",
+  "version": "1.0.2",
+  "displayName": "LWC Snippets",
+  "description": "Lightning Web Component snippets for Visual Studio Code",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "vsce publish",
+    "package": "vsce package"
+  },
+  "publisher": "DamianPoole2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damianpoole/vscode-lwc-snippets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damianpoole/vscode-lwc-snippets/issues"
+  },
+  "homepage": "https://github.com/damianpoole/vscode-lwc-snippets#readme",
+  "devDependencies": {
+    "prettier": "^1.17.1",
+    "vsce": "^1.62.0"
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+    "LWC Jest Setup": {
+        "prefix": "lwcj",
+        "Description": "Creates boilerplate for testing a component",
+        "body": [
+            "import { createElement } from 'lwc';",
+            "import ${1/^([^])/${1:/upcase}/} from 'c/${1:component}';",
+            "",
+            "const createComponent = () => {",
+                "\treturn createElement('c-${1/([A-Z])/-${1:/downcase}/g}', {",
+                    "\t\tis: ${1/^([^])/${1:/upcase}/}",
+                "\t});",
+            "}",
+            "",
+            "const clearUp = () => {",
+                "\tconst body = document.body;",
+                "",
+                "\twhile (body.firstChild) {",
+                    "\t\tbody.removeChild(body.firstChild);",
+                "\t}",
+            "}",
+            "",
+            "describe('$1 component', () => {",
+                "\tafterEach(clearUp);",
+                "",
+                "\tit('Must render', () => {",
+                    "\t\tconst component = createComponent();",
+                    "",
+                    "\t\tdocument.body.appendChild(component);",
+                    "",
+                    "\t\texpect(component.shadowRoot).not.toBeUndefined();",
+                "\t});",
+            "});"
+        ],
+        "scope": "source.js"
+    }
+}
