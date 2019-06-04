@@ -1,6 +1,6 @@
 {
   "name": "vscode-lwc-snippets",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "displayName": "LWC Snippets",
   "description": "Lightning Web Component snippets for Visual Studio Code",
   "scripts": {
