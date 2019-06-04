@@ -1,7 +1,7 @@
 {
     "LWC Jest Setup": {
         "prefix": "lwcj",
-        "Description": "Creates boilerplate for testing a component",
+        "description": "Creates boilerplate for testing a component",
         "body": [
             "import { createElement } from 'lwc';",
             "import ${1/^([^])/${1:/upcase}/} from 'c/${1:component}';",
@@ -30,8 +30,21 @@
                     "",
                     "\t\texpect(component.shadowRoot).not.toBeUndefined();",
                 "\t});",
-            "});"
+            "});",
+            ""
         ],
         "scope": "source.js"
+    },
+    "LWC Template": {
+        "preifx": "lwc",
+        "description": "Basic required code for a component",
+        "body": [
+            "import { LightningElement } from 'lwc';",
+            "",
+            "export default class ${1} extends LightningElement {",
+            "",
+            "}",
+            ""
+        ]
     }
 }
