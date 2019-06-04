@@ -36,7 +36,7 @@
         "scope": "source.js"
     },
     "LWC Template": {
-        "preifx": "lwc",
+        "prefix": "lwc",
         "description": "Basic required code for a component",
         "body": [
             "import { LightningElement } from 'lwc';",
